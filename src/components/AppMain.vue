@@ -29,7 +29,18 @@ export default {
 </script>
 
 <template>
-
+<h1 class="text-center">
+  Sono la lista dei post
+</h1>
+<div class="card m-3" v-for="post in posts">
+  <div class="card-header">
+    {{post.title}}
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{ post.author }}</li>
+    <li class="list-group-item">{{post.content}}</li>
+  </ul>
+</div>
 </template>
 
 <style scoped>

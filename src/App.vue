@@ -15,11 +15,7 @@ export default {
 
 <template>
 
-<h1 class="text-center">
-  Sono la pagina principale
-</h1>
-
-<AppMain/>
+  <AppMain/>
 
 </template>
 
