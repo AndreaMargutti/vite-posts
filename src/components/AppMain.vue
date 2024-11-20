@@ -1,4 +1,6 @@
 <script>
+import axios from 'axios';
+
 export default {
   data() {
     return {
@@ -9,9 +11,10 @@ export default {
   methods: {
     getPosts(){
         axios.get(this.apiUrl)
-            .then(function (response) {
+            .then((response) => {
                 // handle success
-                console.log(response);
+                this.posts = response.data.results;
+                // console.log(this.posts);
             })
             .catch(function (error) {
                 // handle error
